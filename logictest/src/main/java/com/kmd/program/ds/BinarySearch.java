@@ -1,4 +1,4 @@
-package com.kmd;
+package com.kmd.program.ds;
 
 public class BinarySearch {
 
