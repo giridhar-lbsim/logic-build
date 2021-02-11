@@ -1,4 +1,4 @@
-package com.giridhar.datastructure;
+package com.giridhar.datastructure.stack;
 
 public class StackImplementationEx {
 
