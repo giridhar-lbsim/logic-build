@@ -12,7 +12,7 @@ public class LongestGapInMeeting {
 	public int solution(String s) {
 		// write your code in Java SE 8
 		int minutePerDay = 1440;
-		Map<String, Integer> dayMinuteStartMap = new HashMap<>();
+		Map<String, Integer> dayMinuteStartMap = new HashMap<String, Integer>();
 		dayMinuteStartMap.put("Mon", 0);
 		dayMinuteStartMap.put("Tue", minutePerDay);
 		dayMinuteStartMap.put("Wed", 2 * minutePerDay);
