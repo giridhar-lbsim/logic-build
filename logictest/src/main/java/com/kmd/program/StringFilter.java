@@ -50,18 +50,15 @@ class StringFilterTest {
 			if (s.length() == 1 && (int) s.charAt(0) >= 65 && (int) s.charAt(0) <= 123) {
 				charList.add(s);
 			} else {
-				int strCount = 0, intCount = 0, len = s.length();
+				int count = 0, len = s.length();
 				for (int i = 0; i < len; i++) {
 					if ((int) s.charAt(i) >= 65 && (int) s.charAt(i) <= 123) {
-						strCount++;
-					}
-					if ((int) s.charAt(i) >= 48 && (int) s.charAt(i) <= 57) {
-						intCount++;
+						count++;
 					}
 				}
-				if (strCount == len) {
+				if (count == len) {
 					strList.add(s);
-				} else if (intCount == len) {
+				} else {
 					intList.add(s);
 				}
 			}
