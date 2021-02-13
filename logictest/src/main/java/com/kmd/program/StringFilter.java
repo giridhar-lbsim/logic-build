@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class StringFilter {
 
 	public static void main(String[] args) {
-		String[] str = { "kmd", "101", "k", "Giridhar", "25015", "m", "Z", "Ketan", "5", "3515" };
+		String[] str = { "22kmd1", "101", "k", "Giridhar", "25015", "m", "Z", "Ketan", "5", "3515" };
 		StringFilterTest sft = new StringFilterTest();
 		sft.filterdList(str);
 		System.out.println("Char List: " + sft.getCharList());
@@ -56,10 +56,10 @@ class StringFilterTest {
 						count++;
 					}
 				}
-				if (count == len) {
-					strList.add(s);
-				} else {
+				if (count == 0) {
 					intList.add(s);
+				} else {
+					strList.add(s);
 				}
 			}
 		}
