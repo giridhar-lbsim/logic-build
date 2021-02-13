@@ -5,14 +5,14 @@ import java.util.ArrayList;
 public class StringFilter {
 
 	public static void main(String[] args) {
-		String[] str = { "kmd", "101", "a", "Giridhar", "25550", "B", "c", "k", "Ketan", "35000" };
+		String[] str = { "kmd", "101", "k", "Giridhar", "25015", "m", "Z", "Ketan", "5", "3515" };
 		StringFilterTest sft = new StringFilterTest();
 		sft.filterdList(str);
 		System.out.println("Char List: " + sft.getCharList());
 		System.out.println("Integer List: " + sft.getIntList());
 		System.out.println("String List: " + sft.getStrList());
 	}
-	
+
 }
 
 class StringFilterTest {
@@ -50,17 +50,20 @@ class StringFilterTest {
 			if (s.length() == 1 && (int) s.charAt(0) >= 65 && (int) s.charAt(0) <= 123) {
 				charList.add(s);
 			} else {
-				int len = s.length();
-				int count = 0;
+				int strCount = 0, intCount = 0, len = s.length();
 				for (int i = 0; i < len; i++) {
 					if ((int) s.charAt(i) >= 65 && (int) s.charAt(i) <= 123) {
-						count++;
+						strCount++;
+					}
+					if ((int) s.charAt(i) >= 48 && (int) s.charAt(i) <= 57) {
+						intCount++;
 					}
 				}
-				if (count == len) {
+				if (strCount == len) {
 					strList.add(s);
-				} else
+				} else if (intCount == len) {
 					intList.add(s);
+				}
 			}
 		}
 	}
