@@ -11,6 +11,11 @@ public class LinkedListClent {
 		  linkedList.add(20); 
 		  linkedList.add(30);
 		  linkedList.add(40);
+//		  linkedList.show();
+		  linkedList.addAtStart(5);
+		  linkedList.add(50);
+		  System.out.println("linked list after element 5 at first node:");
+		  linkedList.addAt(0, 15);
 		  linkedList.show();
 		 
 		
