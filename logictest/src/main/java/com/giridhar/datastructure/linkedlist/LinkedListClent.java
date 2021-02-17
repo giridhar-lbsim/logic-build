@@ -13,10 +13,20 @@ public class LinkedListClent {
 		  linkedList.add(40);
 //		  linkedList.show();
 		  linkedList.addAtStart(5);
-		  linkedList.add(50);
+		  linkedList.addAt(3, 25);
+		  //linkedList.add(50);
 		  System.out.println("linked list after element 5 at first node:");
-		  linkedList.addAt(0, 15);
+		 
+		  linkedList.deleteAt(5);
+		  
+		  
 		  linkedList.show();
+		  //deleting node
+		  //linkedList.deleteAt(0);
+//		  System.out.println("linked list after deleting node:");
+		  //linkedList.show();
+		  
+		  
 		 
 		
 		/*
