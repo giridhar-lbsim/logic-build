@@ -1,12 +1,15 @@
 package com.giridhar.datastructure.stack;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
+import java.util.Stack;
+import java.util.Vector;
 
 public class StackImplementationUsingQueueEx {
 	public static void main(String[] args) {
-		
 		/*
 		 * Queue<Integer> queue = new PriorityQueue<>(); queue.add(10); queue.add(20);
 		 * queue.add(30);
