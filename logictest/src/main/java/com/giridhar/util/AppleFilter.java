@@ -86,7 +86,22 @@ public class AppleFilter {
 		// apple comparator
 		Comparator<Apple> appleComparator = (Apple apple1, Apple apple2) -> apple1.getColor()
 				.compareTo(apple2.getColor());
+		
+		display(null);
 
+	}
+
+	private static void display(Object o) {
+		System.out.println("Object parameter");
+		
+	}
+
+	/*
+	 * private static void display(String o) {
+	 * System.out.println("String parameter"); }
+	 */
+	private static void display(Integer o) {
+		System.out.println("Integer parameter");
 	}
 
 }
