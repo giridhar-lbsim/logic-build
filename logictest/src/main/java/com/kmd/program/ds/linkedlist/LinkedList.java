@@ -53,7 +53,6 @@ public class LinkedList {
 			node = node.next;
 		}
 		System.out.println(node.data + " ");
-		System.out.println("\n");
 	}
 
 	public void deleteAtStart() {
@@ -77,7 +76,7 @@ public class LinkedList {
 			tempNode = null;
 		}
 	}
-	
+
 	public void deleteAtIndex(int index) {
 		if (head == null)
 			System.out.println("Linked list is empty");
@@ -90,6 +89,29 @@ public class LinkedList {
 			}
 			node.next = tempNode.next;
 			tempNode = null;
+		}
+	}
+
+	public Node reverseLinkedList() {
+		if(head == null) {
+			return head;
+		}
+		Node current = head;
+		Node next = null;
+		Node prev = null;
+		while (current != null) {
+			next = current.next;
+			current.next = prev;
+			prev = current;
+			current = next;
+		}
+		return prev;
+	}
+
+	public void printAfterReverse(Node reverseLinkedList) {
+		while (reverseLinkedList != null) {
+			System.out.print(reverseLinkedList.data + " ");
+			reverseLinkedList = reverseLinkedList.next;
 		}
 	}
 }
