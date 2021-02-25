@@ -1,6 +1,7 @@
 package com.giridhar.datastructure.linkedlist;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
 public class FindAndRemoveDuplicateNode {
@@ -14,13 +15,12 @@ public class FindAndRemoveDuplicateNode {
 		linkedList.add(40);
 		linkedList.add(10);
 		linkedList.add(50);
-		
-		
+
 		linkedList.show();
-		removeDuplicateElement(linkedList);
+		//removeDuplicateElement(linkedList);
+		removeDuplicateUsingHashSet(linkedList);
 		System.out.println("Linked list after removing duplicate element");
 		linkedList.show();
-		
 
 	}
 
@@ -30,15 +30,15 @@ public class FindAndRemoveDuplicateNode {
 		Node currentNode = linkedList.getHead();
 		Node previous = null;
 		while (currentNode != null) {
-			//map to hold unique element
+			// map to hold unique element
 			Node putNode = uniqueNodeMap.put(currentNode.data, currentNode);
-			//putNode will hold null for new element
+			// putNode will hold null for new element
 			if (putNode != null) {
-				//poinint previous node to next of current
+				// poinint previous node to next of current
 				previous.next = currentNode.next;
-				//isolating current node
+				// isolating current node
 				currentNode.next = null;
-				//pointing current not to next of current node
+				// pointing current not to next of current node
 				currentNode = previous.next;
 			} else {
 				// logic for moving next and maintaining the previous
@@ -46,6 +46,29 @@ public class FindAndRemoveDuplicateNode {
 				currentNode = currentNode.next;
 			}
 
+		}
+
+	}
+
+	static void removeDuplicateUsingHashSet(LinkedList linkedList) {
+
+		Node head = linkedList.getHead();
+		Node currentNode = head;
+		Node previous = null;
+		if (head == null) {
+			System.out.println("list is empty: ");
+		} else {
+			HashSet<Integer> hs = new HashSet<>();
+			while (currentNode != null) {
+				if (hs.contains(currentNode.data)) {
+					previous.next = currentNode.next;
+				} else {
+					hs.add(currentNode.data);
+					previous = currentNode;
+
+				}
+				currentNode = currentNode.next;
+			}
 		}
 
 	}
