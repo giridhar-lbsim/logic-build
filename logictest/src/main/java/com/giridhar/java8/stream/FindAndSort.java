@@ -86,7 +86,24 @@ public class FindAndSort {
 
 		List<String> sortedTraderName = findAndSortTraderName(traders);
 		System.out.println("sorted traders name: " + sortedTraderName);
+		
+		//How to find the top five maximum values from list using stream api provided the list has 10 values
+		System.out.println("top 5 from list stream");
+		List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
+		list.stream().sorted(Comparator.reverseOrder()).limit(5).forEach(num->System.out.println(num));
 
+		int[] array = {1,2,3,1,2,3};
+		int[] resultArray = new int[array.length];
+		int count=0;
+		for(int i=0;i<array.length;i++) {
+			if(array[i] != 1) {
+				resultArray[count++] = array[i];
+			}
+		}
+		for(int i=0;i<resultArray.length;i++) {
+			System.out.println(resultArray[i]);
+		}
+		
 	}
 
 }

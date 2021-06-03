@@ -11,6 +11,7 @@ public class Shop {
 		
 		//now we will use phone builder for creating phone
 		Phone phone2 = new PhoneBuilder().setOs("Android").setRam(2).getPhone();
+		phone2
 		System.out.println(phone2.toString());
 	}
 
